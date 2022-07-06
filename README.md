@@ -1,4 +1,4 @@
-# Java TestNG Selenium 
+# How to use CDP console in Java-TestNG automation test on LambdaTest
 
 ### Environment Setup
 
