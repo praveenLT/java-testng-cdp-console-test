@@ -34,7 +34,19 @@ Set LambdaTest Username and Access Key in environment variables.
    $ set LT_USERNAME="YOUR_USERNAME"
    $ set LT_ACCESS_KEY="YOUR ACCESS KEY"
    ```
-    
+
+### To print CDP console log, the following code can be used:
+```java
+ DevTools devTools = ((HasDevTools) driver).getDevTools();
+    devTools.createSession();
+
+    devTools.send(Log.enable());
+    devTools.addListener(Log.entryAdded(), logEntry -> {
+      System.out.println("text: " + logEntry.getText());
+      System.out.println("level: " + logEntry.getLevel());
+      status = true;
+    });
+ ```
 ### Running Tests
 
 ```
